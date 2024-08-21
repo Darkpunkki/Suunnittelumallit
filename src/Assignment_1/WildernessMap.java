@@ -7,8 +7,8 @@ class WildernessMap extends Map {
 
     public WildernessMap(int width, int height) {
         super(width, height);
-        this.random = new Random();  // Initialize the random object
-        generateMap();  // Now generate the map after random has been initialized
+        this.random = new Random();
+        generateMap();
     }
 
     @Override
