@@ -3,7 +3,7 @@ package Assignment_1;
 import java.util.Random;
 
 class WildernessMap extends Map {
-    private Random random;
+    private final Random random;
 
     public WildernessMap(int width, int height) {
         super(width, height);
@@ -13,16 +13,12 @@ class WildernessMap extends Map {
 
     @Override
     public Tile createTile() {
-        int rand = random.nextInt(3);  // Generate a random number between 0 and 2
-        switch (rand) {
-            case 0:
-                return new SwampTile();
-            case 1:
-                return new WaterTile();
-            case 2:
-                return new ForestTile();
-            default:
-                throw new IllegalStateException("Unexpected value: " + rand);
-        }
+        int rand = random.nextInt(3);
+        return switch (rand) {
+            case 0 -> new SwampTile();
+            case 1 -> new WaterTile();
+            case 2 -> new ForestTile();
+            default -> throw new IllegalStateException("Unexpected value: " + rand);
+        };
     }
 }

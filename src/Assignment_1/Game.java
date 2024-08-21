@@ -17,8 +17,8 @@ public class Game {
         int choice = scanner.nextInt();
 
         return switch (choice) {
-            case 1 -> new CityMap(10, 15);  // Creates a CityMap with a 10x15 grid
-            case 2 -> new WildernessMap(10, 15);  // Creates a WildernessMap with a 10x15 grid
+            case 1 -> new CityMap(10, 15);
+            case 2 -> new WildernessMap(10, 15);
             default -> {
                 System.out.println("Invalid choice, defaulting to CityMap.");
                 yield new CityMap(5, 5);
