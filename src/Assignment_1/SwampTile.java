@@ -13,6 +13,6 @@ class SwampTile implements Tile {
 
     @Override
     public void action() {
-        System.out.println("Swamping...");
+        System.out.println("Oops, there is a swamp here...");
     }
 }

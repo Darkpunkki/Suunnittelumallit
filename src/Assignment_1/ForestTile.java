@@ -13,6 +13,6 @@ class ForestTile implements Tile {
 
     @Override
     public void action() {
-        System.out.println("Foresting...");
+        System.out.println("Going to the forest...");
     }
 }

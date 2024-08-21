@@ -13,6 +13,6 @@ class WaterTile implements Tile {
 
     @Override
     public void action() {
-        System.out.println("Swimming...");
+        System.out.println("Swimming in the Water...");
     }
 }
