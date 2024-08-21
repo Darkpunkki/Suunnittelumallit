@@ -7,7 +7,7 @@ class CityMap extends Map {
 
     public CityMap(int width, int height) {
         super(width, height);
-        this.random = new Random();  // Initialize the random object
+        this.random = new Random();
         generateMap();  // Now generate the map after random has been initialized
     }
 
