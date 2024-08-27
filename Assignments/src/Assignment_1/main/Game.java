@@ -1,4 +1,8 @@
-package Assignment_1;
+package Assignment_1.main;
+
+import Assignment_1.factory.CityMap;
+import Assignment_1.map.Map;
+import Assignment_1.factory.WildernessMap;
 
 import java.util.Scanner;
 

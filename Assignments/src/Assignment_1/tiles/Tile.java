@@ -1,6 +1,6 @@
-package Assignment_1;
+package Assignment_1.tiles;
 
-interface Tile {
+public interface Tile {
     char getCharacter();
     String getType();
     void action();

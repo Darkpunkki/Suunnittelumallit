@@ -1,8 +1,14 @@
-package Assignment_1;
+package Assignment_1.factory;
+
+import Assignment_1.tiles.BuildingTile;
+import Assignment_1.tiles.ForestTile;
+import Assignment_1.tiles.RoadTile;
+import Assignment_1.tiles.Tile;
+import Assignment_1.map.Map;
 
 import java.util.Random;
 
-class CityMap extends Map {
+public class CityMap extends Map {
     private final Random random;
 
     public CityMap(int width, int height) {

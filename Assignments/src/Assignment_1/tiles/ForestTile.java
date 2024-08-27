@@ -1,6 +1,6 @@
-package Assignment_1;
+package Assignment_1.tiles;
 
-class ForestTile implements Tile {
+public class ForestTile implements Tile {
     @Override
     public char getCharacter() {
         return 'F';

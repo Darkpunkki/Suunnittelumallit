@@ -1,7 +1,9 @@
-package Assignment_1;
+package Assignment_1.map;
 
-abstract class Map {
-    protected Tile[][] tiles;
+import Assignment_1.tiles.Tile;
+
+abstract public class Map {
+    public Tile[][] tiles;
     protected int width;
     protected int height;
 

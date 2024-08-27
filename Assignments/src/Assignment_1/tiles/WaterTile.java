@@ -1,6 +1,6 @@
-package Assignment_1;
+package Assignment_1.tiles;
 
-class WaterTile implements Tile {
+public class WaterTile implements Tile {
     @Override
     public char getCharacter() {
         return 'W';
