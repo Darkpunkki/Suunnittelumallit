@@ -12,7 +12,7 @@ public class Game {
         Map map = game.createMap();
         map.display();
 
-        map.tiles[0][0].action();
+        //map.tiles[0][0].action();
     }
 
     public Map createMap() {
