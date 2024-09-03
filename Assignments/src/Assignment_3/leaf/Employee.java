@@ -3,8 +3,9 @@ package Assignment_3.leaf;
 import Assignment_3.component.Unit;
 
 public class Employee implements Unit {
-    public String name;
-    private int salary;
+    private final String name;
+    private final int salary;
+    private Unit parent;
 
     public Employee(String name, int salary) {
         this.name = name;
@@ -35,5 +36,20 @@ public class Employee implements Unit {
     public String toXml(int indentationLevel) {
         String indent = "  ".repeat(indentationLevel);
         return indent + "<Employee name=\"" + name + "\" salary=\"" + salary + "\"/>\n";
+    }
+
+    @Override
+    public void setParent(Unit parent) {
+        this.parent = parent;
+    }
+
+    @Override
+    public Unit getParent() {
+        return this.parent;
+    }
+
+    @Override
+    public String getName() {
+        return this.name;
     }
 }
