@@ -3,6 +3,7 @@ package Assignment_7;
 public class IntermediateState extends State {
     public IntermediateState(GameCharacter gameCharacter) {
         super(gameCharacter);
+        gameCharacter.setLevel("Intermediate");
     }
 
 
@@ -12,6 +13,7 @@ public class IntermediateState extends State {
         switch (choice) {
             case 1:
                 System.out.println("You are training...");
+                getGameCharacter().printCurrentState();
                 getGameCharacter().addExp(10);
                 if (getGameCharacter().getExp() >= 100) {
                     System.out.println("You have reached Expert level!");
@@ -22,6 +24,7 @@ public class IntermediateState extends State {
             case 2:
                 System.out.println("You are meditating...");
                 getGameCharacter().addHealth(20);
+                getGameCharacter().printCurrentState();
                 break;
 
             case 5:
