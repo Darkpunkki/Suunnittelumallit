@@ -35,7 +35,7 @@ public class ExpertState extends State {
                     }
                     break;
 
-                case 4:
+                case 5:
                     getGameCharacter().setState(null);
                     return;
             }
