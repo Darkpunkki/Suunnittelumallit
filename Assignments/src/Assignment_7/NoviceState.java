@@ -13,6 +13,7 @@ public class NoviceState extends State {
         switch (choice) {
             case 1:
                 System.out.println("You are training...");
+                getGameCharacter().printCurrentState();
                 getGameCharacter().addExp(10);
                 if (getGameCharacter().getExp() >= 50) {
                     System.out.println("You have reached Intermediate level!");

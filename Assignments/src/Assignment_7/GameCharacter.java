@@ -28,6 +28,10 @@ public class GameCharacter {
         this.state = state;
     }
 
+    public void printCurrentState() {
+        System.out.println("Current level: " + getLevel());
+    }
+
     public void addExp(double amount) {
         exp += amount;
         System.out.println("You gained " + amount + " exp.");

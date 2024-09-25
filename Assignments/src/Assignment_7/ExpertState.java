@@ -4,6 +4,7 @@ public class ExpertState extends State {
 
         public ExpertState(GameCharacter gameCharacter) {
             super(gameCharacter);
+            gameCharacter.setLevel("Expert");
         }
 
         public void play() {
@@ -12,16 +13,19 @@ public class ExpertState extends State {
             switch (choice) {
                 case 1:
                     System.out.println("You are training...");
+                    getGameCharacter().printCurrentState();
                     getGameCharacter().addExp(10);
                     break;
 
                 case 2:
                     System.out.println("You are meditating...");
                     getGameCharacter().addHealth(20);
+                    getGameCharacter().printCurrentState();
                     break;
 
                 case 3:
                     System.out.println("You are fighting...");
+                    getGameCharacter().printCurrentState();
                     getGameCharacter().addExp(20);
                     getGameCharacter().reduceHealth(50);
                     if (getGameCharacter().getHealth() <= 0) {
