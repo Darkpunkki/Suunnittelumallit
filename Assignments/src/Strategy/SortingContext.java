@@ -19,9 +19,9 @@ public class SortingContext {
     public static void main(String[] args) {
         SortingContext context = new SortingContext();
 
-        // Generate small and large data sets
+        // Generate data sets
         int[] smallArray = generateRandomArray(30);
-        int[] largeArray = generateRandomArray(10000);
+        int[] largeArray = generateRandomArray(50000);
 
         // Test BubbleSort strategy on small array
         context.setStrategy(new BubbleStrategy());
@@ -52,6 +52,7 @@ public class SortingContext {
         System.out.println("QuickSort took: " + (endTime - startTime) / 1e6 + " ms on small array");
         System.out.println(" ");
 
+        /*
         // Test QuickSort strategy on large array
         context.setStrategy(new QuickSortStrategy());
         System.out.println("Testing QuickSort on large array");
@@ -60,6 +61,7 @@ public class SortingContext {
         endTime = System.nanoTime();
         System.out.println("QuickSort took: " + (endTime - startTime) / 1e6 + " ms on large array");
         System.out.println(" ");
+        */
 
         // Test CocktailSort strategy on small array
         context.setStrategy(new CocktailSortStrategy());
@@ -87,7 +89,7 @@ public class SortingContext {
         Random random = new Random();
         int[] array = new int[size];
         for (int i = 0; i < size; i++) {
-            array[i] = random.nextInt(10);  // Generates random integers in range 0-9
+            array[i] = random.nextInt(1000);
         }
         return array;
     }
