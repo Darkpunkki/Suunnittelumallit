@@ -6,7 +6,7 @@ public class Handler {
     protected String name;
 
     public Handler(String name) {
-        this.name = name;   // Constructor to set the handler name
+        this.name = name;
     }
 
     public void handleRequest(Message message) {
