@@ -12,7 +12,7 @@ public class FilePrinter extends PrinterDecorator {
     @Override
     public void print(String message) {
         try (FileWriter writer = new FileWriter("output.txt", true)) {
-            writer.write(message);
+            writer.write(message + "\n");
         } catch (IOException e) {
             e.printStackTrace();
         }
