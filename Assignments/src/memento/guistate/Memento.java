@@ -1,4 +1,3 @@
-package memento.guistate;
 
 import java.time.LocalDateTime;
 

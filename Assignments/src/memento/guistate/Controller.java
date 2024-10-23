@@ -1,4 +1,3 @@
-package memento.guistate;
 
 import java.util.ArrayList;
 import java.util.List;

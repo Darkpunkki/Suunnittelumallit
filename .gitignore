@@ -68,7 +68,6 @@ bin/
 /target/classes/Assignment_1/map/Map.class
 /target/classes/Assignment_7/MasterState.class
 /target/classes/memento/guistate/Memento.class
-/Assignments/src/memento/guistate/Memento.java
 /target/classes/ChainOfResponsibility/Message$MessageType.class
 /target/classes/ChainOfResponsibility/Message.class
 /target/classes/memento/guistate/Model.class
@@ -78,7 +77,6 @@ bin/
 /target/classes/Assignment_2/concrete_factory/ModernUIFactory.class
 /target/classes/Assignment_7/NoviceState.class
 /target/classes/Assignment_4/observer/Observer.class
-/target/maven-archiver/pom.properties
 /target/classes/Assignment_6/Printer.class
 /target/classes/Assignment_6/PrinterDecorator.class
 /target/classes/Strategy/QuickSortStrategy.class
