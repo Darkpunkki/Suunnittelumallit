@@ -5,8 +5,8 @@ import java.util.List;
 public class Controller {
     private Model model;
     private Gui gui;
-    private List<IMemento> undoList; // Memento history
-    private List<IMemento> redoList; // Memento history
+    private List<IMemento> undoList;
+    private List<IMemento> redoList;
 
     public Controller(Gui gui) {
         this.model = new Model();

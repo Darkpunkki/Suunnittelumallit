@@ -7,14 +7,14 @@ public class Memento implements IMemento {
     private LocalDateTime timestamp;
 
     public Memento(int[] options, boolean isSelected) {
-        this.options = options.clone(); // Clone to prevent external modification
+        this.options = options.clone();
         this.isSelected = isSelected;
         this.timestamp = LocalDateTime.now();
         System.out.println("Memento created");
     }
 
     public int[] getOptions() {
-        return options.clone(); // Return a clone to prevent external modification
+        return options.clone();
     }
 
     public boolean isSelected() {
