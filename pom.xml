@@ -12,19 +12,57 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <javafx.version>20.0.1</javafx.version>
+        <javafx.module.path>C:\Users\jimij\.sdks\javafx-sdk-21.0.5\lib</javafx.module.path>
     </properties>
 
     <dependencies>
-        <dependency> <groupId>org.openjfx</groupId> <artifactId>javafx</artifactId> <version>20.0.1</version> <type>pom</type> </dependency>
-        <dependency> <groupId>org.openjfx</groupId> <artifactId>javafx-graphics</artifactId> <version>20.0.1</version> </dependency>
-        <dependency> <groupId>org.openjfx</groupId> <artifactId>javafx-fxml</artifactId> <version>20.0.1</version> </dependency>
-        <dependency> <groupId>org.openjfx</groupId> <artifactId>javafx-controls</artifactId> <version>20.0.1</version> </dependency>
+        <!-- JavaFX Dependencies -->
         <dependency>
-            <groupId>com.googlecode.json-simple</groupId>
-            <artifactId>json-simple</artifactId>
-            <version>1.1.1</version>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>${javafx.version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-base</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-graphics</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Maven Compiler Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.1</version>
+                <configuration>
+                    <release>17</release>
+                </configuration>
+            </plugin>
+
+            <!-- Maven Exec Plugin to run JavaFX application -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.0.0</version>
+                <configuration>
+                    <mainClass>Assignment_1.main.Game</mainClass>
+                    <arguments>
+                        <argument>--module-path</argument>
+                        <argument>${javafx.module.path}</argument>
+                        <argument>--add-modules</argument>
+                        <argument>javafx.controls,javafx.fxml</argument>
+                    </arguments>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

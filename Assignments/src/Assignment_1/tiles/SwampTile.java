@@ -1,6 +1,9 @@
 package Assignment_1.tiles;
 
+import javafx.scene.canvas.GraphicsContext;
+
 public class SwampTile implements Tile {
+    private final TileGraphic graphic = TileGraphicFactory.getGraphic("swamp");
     @Override
     public char getCharacter() {
         return 'S';
@@ -14,5 +17,11 @@ public class SwampTile implements Tile {
     @Override
     public void action() {
         System.out.println("Oops, there is a swamp here...");
+    }
+
+    @Override
+    public void render(GraphicsContext gc, int x, int y, int tileSize) {
+        gc.setFill(graphic.getColor());
+        gc.fillRect(x * tileSize, y* tileSize, tileSize, tileSize);
     }
 }
