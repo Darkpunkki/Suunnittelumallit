@@ -47,7 +47,7 @@ public class FibonacciIterator implements Iterator<Integer> {
     }
 
     public void reset() {
-        this.prev1 = 0; // Reset to the first number
+        this.prev1 = 1; // Reset to the first number
         this.prev2 = 1; // Reset to the second number
         this.currentIndex = 0; // Reset the index
     }
